@@ -1,0 +1,39 @@
+.login__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.login__box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    border-top: 5px solid var(--branding);
+    width: 23rem;
+    min-height: 18rem;
+    border-radius: 5px;
+    padding: 2.3rem;
+    gap: 3rem;
+}
+
+.login__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.login__description h2{
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.login__description span {
+    font-weight: 200;
+    text-align: center;
+    font-size: 0.9rem;
+}

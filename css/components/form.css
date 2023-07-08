@@ -1,0 +1,55 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form__group label {
+    font-size: 1rem;
+}
+
+.form__group input {
+    font-size: 1rem;
+    padding: 0.2rem;
+    height: 2.5rem;
+    color: gray;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid #C9CACE;
+    padding-left: 0.5rem;
+}
+
+.form__group button {
+    padding: 0.2rem;
+    background-color: var(--branding);
+    height: 2.5rem;
+    border: none;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+.form__group button:hover {
+    cursor: pointer;
+    background-color: #266141;
+}
+
+.not__account {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.not__account a {
+    padding-left: 0.2rem;
+    text-decoration: none;
+    color: var(--branding);
+}
