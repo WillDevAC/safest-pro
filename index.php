@@ -19,6 +19,13 @@ if (isset($_GET["url"])) {
                 header("Location: ./auth");
             }
             break;
+        case "inventories":
+            if (isset($_COOKIE["@AuthToken"]) && $_COOKIE["@AuthToken"] === $DOCUMENT["API_KEY"]) {
+                require_once "pages/inventories.php";
+            } else {
+                header("Location: ./auth");
+            }
+            break;
         default:
             require_once "pages/404.php";
             break;

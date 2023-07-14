@@ -1,0 +1,72 @@
+.inventoriesList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1rem;
+    grid-gap: 1rem;
+    margin-top: 2rem;
+}
+
+.inventorieCard {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 15rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.inventorieCardAdd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #DBDBDB;
+    height: 15rem;
+    padding: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    color: gray;
+}
+
+.inventarieInfo {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    padding: 0.5rem;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+}
+
+.inventarieLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    padding: 1rem;
+    background-color: #7c9687;
+    border-radius: 5px;
+}
+
+.inventarieLogo i {
+    font-size: 2rem;
+    color: white;
+}
+
+.inventarieDesc {
+    display: flex;
+    flex-direction: column;
+}
+
+.inventarieDesc p {
+    font-weight: bold;
+}
+
+.inventarieActions {
+    display: grid;
+    flex: 1;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 1rem;
+    grid-gap: 2rem;
+}
