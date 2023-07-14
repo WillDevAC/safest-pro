@@ -1,0 +1,57 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 4.5rem;
+    border-bottom: 1px solid #DBDBDB;
+    padding-right: 1rem;
+}
+
+.header__actions {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 2rem;
+}
+
+.header__profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.5rem;
+    padding-top: 0.3rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0.3rem;
+    border-radius: 5px;
+    border: 1px solid #DBDBDB;
+}
+
+.header__profile__info h4 {
+    color: #0D062D;
+}
+
+.header__profile:hover {
+    background-color: rgb(232, 232, 232);
+}
+
+.header__profile__gravatar {
+    display: flex;
+    align-items: center;
+    max-width: 3.125rem;
+}
+
+.header__profile__gravatar img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.header__icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header__icon i {
+    font-size: 1.5rem;
+}

@@ -13,11 +13,11 @@
 <body>
     <div class="login__container">
         <div class="login__box">
-            <img src="#" alt="Logo">
+            <img src="assets/logo.png" alt="Logo">
             <div class="login__description">
                 <h2>Registro de técnico</h2>
                 <span>
-                    Preencha os campos abaixo com atenção!
+                    Preencha seus dados abaixo com atenção!
                 </span>
             </div>
             <div class="form">
@@ -47,6 +47,6 @@
 <script src="scripts/interface/jquery.js"></script>
 <script src="scripts/interface/jquery.mask.js"></script>
 <script src="scripts/interface/loader.js"></script>
-<script src="scripts/integration/auth.js"></script>
+<script src="scripts/integration/register.js"></script>
 
 </html>

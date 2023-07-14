@@ -1,0 +1,179 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #DBDBDB;
+    width: 17rem;
+}
+
+.aside__logo {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #DBDBDB;
+    padding-left: 1rem;
+    height: 4.5rem;
+}
+
+.aside__logo img {
+    max-width: 130px;
+}
+
+.aside__options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style-type: none;
+    margin: 1rem;
+}
+
+.aside__options li {
+    display: flex;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0.5rem;
+}
+
+.poweredByCompany {
+    display: flex;
+    flex: 1;
+    align-items: end;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.poweredByCompanyInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: gray;
+}
+
+.poweredByCompany .poweredByCompanyInfo img {
+    width: 64px;
+}
+
+.aside__options li:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(232, 232, 232);
+}
+
+.aside__options li i {
+    color: #787486;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    padding-top: 0.9rem;
+}
+
+.aside__options li a {
+    color: #787486;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.content {
+    flex: 1;
+}
+
+.main__content {
+    display: block;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
+}
+
+.main__statistics {
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5rem;
+}
+
+.main__statistics__card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 5px;
+    height: 6rem;
+    background-color: white;
+    padding: 1rem;
+}
+
+.main__statistics__card__photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 64px;
+    height: 64px;
+}
+
+.main__statistics__card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+#inventarys {
+    background-color: #02a674;
+}
+
+#situations {
+    background-color: #3161a1;
+}
+
+#tecnichian {
+    background-color: #c4618d;
+}
+
+#stats {
+    background-color: #009ccf;
+}
+
+.main__statistics__card__photo i {
+    font-size: 2rem;
+    color: white;
+}
+
+.main__statistics__card:nth-child(1) {
+    border-top: 0.4rem solid #02a674;
+}
+
+.main__statistics__card:nth-child(2) {
+    border-top: 0.4rem solid #3161a1;
+}
+
+.main__statistics__card:nth-child(3) {
+    border-top: 0.4rem solid #c4618d;
+}
+
+.main__statistics__card:nth-child(4) {
+    border-top: 0.4rem solid #009ccf;
+}
+
+.new__inventory__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #02a674;
+    padding: 1rem;
+    width: 1.4rem;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    margin: 2rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

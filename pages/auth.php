@@ -13,7 +13,7 @@
 <body>
     <div class="login__container">
         <div class="login__box">
-            <img src="#" alt="Logo">
+            <img src="assets/logo.png" alt="Logo">
             <div class="login__description">
                 <h2>Bem vindo, SafeST!</h2>
                 <span>

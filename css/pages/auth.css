@@ -17,7 +17,11 @@
     min-height: 18rem;
     border-radius: 5px;
     padding: 2.3rem;
-    gap: 3rem;
+    gap: 2rem;
+}
+
+.login__box img {
+    max-width: 200px;
 }
 
 .login__description {

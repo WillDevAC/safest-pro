@@ -1,6 +1,6 @@
 const URL_REQUEST = "http://localhost/safest-backend/?rota=";
 
-const saveTokenWithAuthSuccess = async (token, name, id) => {
+const saveTokenWithAuthSuccess = async (token, name, id, email_user) => {
   var minutesExpiration = 30;
   var dateExpiration = new Date();
 
@@ -17,6 +17,14 @@ const saveTokenWithAuthSuccess = async (token, name, id) => {
     "; path=/";
 
   document.cookie =
+    "@UserID" +
+    "=" +
+    id +
+    "; expires=" +
+    dateExpiration.toUTCString() +
+    "; path=/";
+
+  document.cookie =
     "@UserName" +
     "=" +
     name +
@@ -25,9 +33,9 @@ const saveTokenWithAuthSuccess = async (token, name, id) => {
     "; path=/";
 
   document.cookie =
-    "@UserID" +
+    "@UserEmail" +
     "=" +
-    id +
+    email_user +
     "; expires=" +
     dateExpiration.toUTCString() +
     "; path=/";
@@ -36,50 +44,6 @@ const saveTokenWithAuthSuccess = async (token, name, id) => {
   $("#password").val("");
 
   window.location.href = "./dashboard";
-};
-
-const RegisterTechnician = (name, email, password) => {
-  $.ajax({
-    url: URL_REQUEST + "RegistrarTecnico",
-    type: "POST",
-    data: {
-      nome: name,
-      cpf: cpf,
-      email: email,
-      senha: password,
-    },
-    beforeSend: function () {
-      $.LoadingOverlay("show");
-    },
-  })
-    .done(function (response) {
-      $.LoadingOverlay("hide");
-
-      const request = JSON.parse(response);
-
-      if (request.status === 200) {
-        Swal.fire({
-          title: "Sucesso!",
-          text: "Cadastro realizado com sucesso",
-          icon: "success",
-          showCancelButton: true,
-          confirmButtonText: "OK",
-        }).then((result) => {
-          if (result.isConfirmed) {
-            window.location.href = "./auth";
-          }
-        });
-      } else {
-        Swal.fire("Ooops...", "Falha ao registrar técnico", "error");
-        $("#name").val("");
-        $("#cpf").val("");
-        $("#email").val("");
-        $("#password").val("");
-      }
-    })
-    .fail(function (jqXHR, textStatus, response) {
-      alert(response);
-    });
 };
 
 const AuthTechnician = (email, password) => {
@@ -97,12 +61,24 @@ const AuthTechnician = (email, password) => {
     .done(function (response) {
       $.LoadingOverlay("hide");
 
-      const request = JSON.parse(response);
+      try {
+        const request = JSON.parse(response);
 
-      if (request.status === 200) {
-        saveTokenWithAuthSuccess(request.token, request.name, request.id);
-      } else {
-        Swal.fire("Ooops...", "Senha ou usuário incorreto!", "error");
+        if (request.status === 200) {
+          saveTokenWithAuthSuccess(
+            request.token,
+            request.name,
+            request.id,
+            request.email
+          );
+        } else {
+          Swal.fire("Ooops...", "Senha ou usuário incorreto!", "error");
+          $("#email").val("");
+          $("#password").val("");
+          $("#email").focus();
+        }
+      } catch (error) {
+        Swal.fire("Ooops...", "Usuário inexistente!", "error");
         $("#email").val("");
         $("#password").val("");
         $("#email").focus();
@@ -124,19 +100,3 @@ $("#btn-login").click(function () {
 
   AuthTechnician(email, password);
 });
-
-$("#btn-register").click(function () {
-  const name = $("#name").val();
-  const cpf = $("#cpf").val();
-  const email = $("#email").val();
-  const password = $("#password").val();
-
-  if (name === "" || email === "" || cpf === "" || password === "") {
-    Swal.fire("Ooops...", "Preencha os campos!", "question");
-    return;
-  }
-
-  RegisterTechnician(name, cpf, email, password);
-});
-
-$("#cpf").mask("000.000.000-00");
