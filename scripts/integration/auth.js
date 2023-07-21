@@ -1,8 +1,8 @@
 const URL_REQUEST = "http://localhost/safest-backend/?rota=";
 
 const saveTokenWithAuthSuccess = async (token, name, id, email_user) => {
-  var minutesExpiration = 30;
-  var dateExpiration = new Date();
+  let minutesExpiration = 30;
+  let dateExpiration = new Date();
 
   await dateExpiration.setTime(
     dateExpiration.getTime() + minutesExpiration * 60000

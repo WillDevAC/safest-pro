@@ -48,7 +48,9 @@
   </div>
   <?php
     include "components/buttons/add__inventory.php";
-    include "components/modals/add__inventory.php";
+    include "components/modals/add_inventorie/step1.php";
+    include "components/modals/add_inventorie/step2.php";
+    include "components/modals/add_inventorie/step3.php";
   ?>
 </body>
 <script src="https://unpkg.com/@phosphor-icons/web"></script>

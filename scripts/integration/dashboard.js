@@ -18,7 +18,7 @@ jQuery(function ($) {
 });
 
 $("#btn_add_inventory").click(function () {
-  $("#add_inventory").modal({
+  $("#add_inventory_step1").modal({
     fadeDuration: 1000,
     fadeDelay: 0.5,
   });

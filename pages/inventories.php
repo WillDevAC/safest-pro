@@ -40,91 +40,24 @@
                         <h1>Meus inventários</h1>
                     </div>
                     <!-- @Contéudo Principal !-->
-                    <div class="inventoriesList">
-                        <div class="inventorieCard">
-                            <div class="inventarieInfo">
-                                <div class="inventarieLogo">
-                                    <i class="ph ph-archive"></i>
-                                </div>
-                                <div class="inventarieDesc">
-                                    <p>Nome</p>
-                                    <span>xx</span>
-                                </div>
-                                <div class="inventarieDesc">
-                                    <p>Data</p>
-                                    <span>00/00/0000</span>
-                                </div>
-                            </div>
-                            <div class="inventarieActions">
-                                <button>Ver detalhes</button>
-                                <button>Adicionar perigos</button>
-                                <button>Adicionar imagens</button>
-                                <button>Emitir relatório</button>
-                                <button>Excluir inventário</button>
-                            </div>
-                        </div>
-                        <div class="inventorieCard">
-                            <div class="inventarieInfo">
-                                <div class="inventarieLogo">
-                                    <i class="ph ph-archive"></i>
-                                </div>
-                                <div class="inventarieDesc">
-                                    <p>Nome</p>
-                                    <span>xx</span>
-                                </div>
-                                <div class="inventarieDesc">
-                                    <p>Data</p>
-                                    <span>00/00/0000</span>
-                                </div>
-                            </div>
-                            <div class="inventarieActions">
-                                <button>Ver detalhes</button>
-                                <button>Adicionar perigos</button>
-                                <button>Adicionar imagens</button>
-                                <button>Emitir relatório</button>
-                                <button>Excluir inventário</button>
-                            </div>
-                        </div>
-                        <div class="inventorieCard">
-                            <div class="inventarieInfo">
-                                <div class="inventarieLogo">
-                                    <i class="ph ph-archive"></i>
-                                </div>
-                                <div class="inventarieDesc">
-                                    <p>Nome</p>
-                                    <span>xx</span>
-                                </div>
-                                <div class="inventarieDesc">
-                                    <p>Data</p>
-                                    <span>00/00/0000</span>
-                                </div>
-                            </div>
-                            <div class="inventarieActions">
-                                <button>Ver detalhes</button>
-                                <button>Adicionar perigos</button>
-                                <button>Adicionar imagens</button>
-                                <button>Emitir relatório</button>
-                                <button>Excluir inventário</button>
-                            </div>
-                        </div>
-                        <div class="inventorieCardAdd">
-                            ADICIONAR NOVO INVENTÁRIO
-                        </div>
-                    </div>
-                </div>
+                    <?php
+                        include "components/listInventories.php";
+                    ?>
             </main>
         </div>
     </div>
     <?php
-    include "components/buttons/add__inventory.php";
-    include "components/modals/add__inventory.php";
+        include "components/buttons/add__inventory.php";
+        include "components/modals/add_inventorie/step1.php";
+        include "components/modals/add_inventorie/step2.php";
+        include "components/modals/add_inventorie/step3.php";
     ?>
 </body>
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="scripts/interface/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-<script src="scripts/interface/loader.js"></script>
-<script src="scripts/integration/dashboard.js"></script>
-
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="scripts/interface/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="scripts/interface/loader.js"></script>
+    <script src="scripts/integration/dashboard.js"></script>
+    <script src="scripts/integration/inventories.js"></script>
 </html>
