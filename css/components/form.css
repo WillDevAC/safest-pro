@@ -13,6 +13,7 @@
 
 .form__group label {
     font-size: 1rem;
+    /* padding: 0.2rem; */
 }
 
 .form__group input {
@@ -26,6 +27,15 @@
     padding-left: 0.5rem;
 }
 
+.form__group select {
+    height: 2.5rem; 
+    border: 1px solid #ccc; 
+    border-radius: 3px; 
+    padding: 0.5rem; 
+    font-size: 1rem; 
+  }
+  
+  
 .form__group button {
     padding: 0.2rem;
     background-color: var(--branding);
@@ -62,7 +72,19 @@
     border: 1px solid #C9CACE;
     padding-left: 0.5rem;
 }
-
+.form__groups select {
+    height: 2.5rem; 
+    border: 1px solid #ccc; 
+    border-radius: 3px; 
+    padding: 0.5rem; 
+    font-size: 1rem; 
+  }
+  
+  .form__groups label {
+    font-weight: bold; 
+    display: block; 
+    margin-bottom:  1rem;
+  }
 .form__groups button {
     padding: 0.2rem;
     background-color: var(--branding);

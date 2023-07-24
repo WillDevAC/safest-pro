@@ -2,7 +2,7 @@
 <div id="add_inventory_step1" class="modal">
   <div class="modal__title">
     <h2>Adicionar inventário</h2>
-    <span>Preencha os dados do inventário com atenção.</span>
+    <span>Preencha os dados do endereço com atenção.</span>
   </div>
   <div class="form">
     <div class="form__groups">
