@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     background-color: white;
-    height: 15rem;
+    height: 10rem;
     padding: 1rem;
     border-radius: 5px;
 }
@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: center;
     border: 2px dashed #DBDBDB;
-    height: 15rem;
+    height: 10rem;
     padding: 1rem;
     border-radius: 5px;
     font-weight: bold;
@@ -69,6 +69,6 @@
     flex: 1;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 1rem;
-    grid-gap: 2rem;
+    grid-gap: 1.5rem;
 }
 

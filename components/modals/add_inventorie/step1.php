@@ -45,7 +45,7 @@
     </div>
 
     <div class="form__group">
-      <button id="btn-cadastrar-inventario-etapa1">Proximo</button>
+      <button id="btn-cadastrar-inventario-etapa1">Próximo</button>
     </div>
   </div>
 </div>

@@ -19,11 +19,11 @@ const listInventories = (id_tecnico, token) => {
 
       inventories.map((inventorie) => {
         $("#inventoriesList").append(
-          '<div class="inventorieCard"><div class="inventarieInfo"><div class="inventarieLogo"><i class="ph ph-archive"></i></div><div class="inventarieDesc"><p>Nome</p><span>' +
+          '<div class="inventorieCard"><div class="inventarieInfo"><div class="inventarieLogo"><i class="ph ph-archive"></i></div><div class="inventarieDesc"><p>Local</p><span>' +
             inventorie.nome +
             '</span></div><div class="inventarieDesc"><p>Data</p><span>' +
             inventorie.data +
-            '</span></div></div><div class="inventarieActions"><button>Ver detalhes</button><button>Adicionar perigos</button><button>Adicionar imagens</button><button>Emitir relatório</button><button>Excluir inventário</button></div></div>'
+            '</span></div></div><div class="inventarieActions"><button>Ver detalhes</button><button>Emitir relatório</button><button>Excluir</button></div></div>'
         );
       });
     })
@@ -290,3 +290,62 @@ function getCookieValue(cookieName) {
   console.log("Cookie " + cookieName + " não encontrado.");
   return null;
 }
+
+
+//Seleção dinamica no formulario - parte das consequencia e probabilidade
+
+// Função para atualizar as opções de classificacao-probabilidade
+function updateProbabilidadeOptions() {
+  const cosequencia = document.getElementById("classificacao-cosequencia").value;
+  const probabilidadeSelect = document.getElementById("classificacao-probabilidade");
+
+  // Limpar opções anteriores
+  probabilidadeSelect.innerHTML = "";
+
+  // Adicionar novas opções de acordo com a seleção
+  if (cosequencia === "1") {
+    addOption(probabilidadeSelect, "1", "Rara");
+  } else if (["2", "3", "4"].includes(cosequencia)) {
+    addOption(probabilidadeSelect, "2", "Remota");
+    addOption(probabilidadeSelect, "3", "Possível");
+    addOption(probabilidadeSelect, "4", "Provável");
+  }
+}
+
+// Função para atualizar as opções de classificacao-probabilidade-referencia
+function updateProbabilidadeReferenciaOptions() {
+  const cosequenciaReferencia = document.getElementById("classificacao-cosequencia-referencia").value;
+  const probabilidadeReferenciaSelect = document.getElementById("classificacao-probabilidade-referencia");
+
+  // Limpar opções anteriores
+  probabilidadeReferenciaSelect.innerHTML = "";
+
+  // Adicionar novas opções de acordo com a seleção
+  if (["1", "2"].includes(cosequenciaReferencia)) {
+    addOption(probabilidadeReferenciaSelect, "1", "Rara");
+    addOption(probabilidadeReferenciaSelect, "2", "Remota");
+    addOption(probabilidadeReferenciaSelect, "3", "Possível");
+    addOption(probabilidadeReferenciaSelect, "4", "Provável");
+  } else if (cosequenciaReferencia === "3") {
+    addOption(probabilidadeReferenciaSelect, "1", "Rara");
+    addOption(probabilidadeReferenciaSelect, "2", "Remota");
+    addOption(probabilidadeReferenciaSelect, "3", "Possível");
+  }
+}
+
+// Função auxiliar para adicionar uma opção ao select
+function addOption(select, value, text) {
+  const option = document.createElement("option");
+  option.value = value;
+  option.text = text;
+  select.add(option);
+}
+
+// Adicionar os event listeners para detectar mudanças nas seleções
+document.getElementById("classificacao-cosequencia").addEventListener("change", updateProbabilidadeOptions);
+document.getElementById("classificacao-cosequencia-referencia").addEventListener("change", updateProbabilidadeReferenciaOptions);
+
+// Executar as funções de atualização inicialmente para definir as opções corretas ao carregar a página
+updateProbabilidadeOptions();
+updateProbabilidadeReferenciaOptions();
+

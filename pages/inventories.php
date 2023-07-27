@@ -27,7 +27,7 @@
                 </ul>
                 <div class="poweredByCompany">
                     <div class="poweredByCompanyInfo">
-                        oferecido por: <img src="assets/ifmaker.png" alt="Logo IfMaker">
+                        Apoio: <img src="assets/ifac.png" alt="Logo IFAC"> <img src="assets/ifmaker.jpg" alt="Logo IfMaker">
                     </div>
                 </div>
             </aside>

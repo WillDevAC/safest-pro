@@ -23,3 +23,10 @@ $("#btn_add_inventory").click(function () {
     fadeDelay: 0.5,
   });
 });
+
+  $("#btn_add_inventory1").click(function () {
+    $("#add_inventory_step1").modal({
+      fadeDuration: 1000,
+      fadeDelay: 0.5,
+  });
+});

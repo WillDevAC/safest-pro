@@ -24,11 +24,11 @@
 
             <label for="tiporisco">Tipo de risco:</label>
             <select id="tiporisco" name="tipoRisco">
-                <option value="fisico">Físico</option>
-                <option value="quimico">Quimico</option>
-                <option value="biologico">Biológico</option>
-                <option value="ergonomico">Ergonômico</option>
-                <option value="acidente">Acidente</option>
+                <option value="Físico">Físico</option>
+                <option value="Quimico">Quimico</option>
+                <option value="Biológico">Biológico</option>
+                <option value="Ergonômico">Ergonômico</option>
+                <option value="Acidente">Acidente</option>
             </select><br>
 
             <label for="agente">Agente / Condição: </label>
@@ -53,10 +53,10 @@
 
             <label for="classificacao-probabilidade">Probabilidade:</label>
             <select id="classificacao-probabilidade" name="classificacao-probabilidade">
-                <option value="1">rara</option>
-                <option value="2">remota</option>
-                <option value="3">possível</option>
-                <option value="4">provável</option>
+                <option value="1">Rara</option>
+                <option value="2">Remota</option>
+                <option value="3">Possível</option>
+                <option value="4">Provável</option>
             </select><br>
         </div>
 
@@ -77,10 +77,10 @@
     
             <label for="classificacao-probabilidade-referencia">Probabilidade de Referência:</label>
             <select id="classificacao-probabilidade-referencia" name="classificacao-probabilidade-referencia">
-                <option value="1">rara</option>
-                <option value="2">remota</option>
-                <option value="3">possível</option>
-                <option value="4">provavel</option>
+                <option value="1">Rara</option>
+                <option value="2">Remota</option>
+                <option value="3">Possível</option>
+                <option value="4">Provavel</option>
             </select><br>
         </div>
 
@@ -95,7 +95,10 @@
 
         <div class="form__group">
             <button id="btn-adicionar_situacao">Adicionar novo perigo</button>
-            <button id="btn-cadastrar-inventario-etapa2">Proximo</button>
+        </div>
+
+        <div class="form__group">
+            <button id="btn-cadastrar-inventario-etapa2">Próximo</button>
         </div>
         </div>
     </div>

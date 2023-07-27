@@ -8,7 +8,7 @@
 .form__group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    /* gap: 0.5rem; */
 }
 
 .form__group label {
@@ -53,6 +53,14 @@
     font-size: 0.9rem;
     font-weight: 600;
     border-radius: 3px;
+}
+
+#btn-adicionar_situacao{
+    background-color: #1cae5e;
+}
+#btn-adicionar_situacao:hover{
+    cursor: pointer;
+    background-color: #168548;
 }
 
 .form__group button:hover {
