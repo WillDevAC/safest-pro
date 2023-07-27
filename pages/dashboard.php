@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/components/header.css" />
   <link rel="stylesheet" href="css/components/form.css" />
   <link rel="stylesheet" href="css/pages/dashboard.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <link rel="stylesheet" href="css/components/jquery.modal.min.css"/>
   <title>SAFEST - Página Principal</title>
 </head>
 

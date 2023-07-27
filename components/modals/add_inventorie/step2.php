@@ -7,20 +7,20 @@
     <div class="form">
         <div class="form__group">
             <h3>Identificação e Descrição dos Perigos:</h3><br>
-            <label for="funcao">Nome do Funcionário:</label><br>
-            <input type="text" id="funcionario" name="funcionario"><br><br>
+            <label for="funcao">Nome do Funcionário:</label>
+            <input type="text" id="funcionario" name="funcionario"><br>
 
-            <label for="descricao">Setor: </label><br>
-            <input type="text" id="setor" name="setor"><br><br>
+            <label for="descricao">Setor: </label>
+            <input type="text" id="setor" name="setor"><br>
 
-            <label for="funcao">Função:</label><br>
-            <input type="text" id="funcao" name="funcao"><br><br>
+            <label for="funcao">Função:</label>
+            <input type="text" id="funcao" name="funcao"><br>
 
-            <label for="descricao">Descrição da Atividade: </label><br>
-            <input type="text" id="descricao" name="descricao"><br><br>
+            <label for="descricao">Descrição da Atividade: </label>
+            <input type="text" id="descricao" name="descricao"><br>
 
-            <label for="epi">EPC / EPI utilizados: </label><br>
-            <input type="text" id="epi" name="epi"><br><br>
+            <label for="epi">EPC / EPI utilizados: </label>
+            <input type="text" id="epi" name="epi"><br>
 
             <label for="tiporisco">Tipo de risco:</label>
             <select id="tiporisco" name="tipoRisco">
@@ -29,16 +29,16 @@
                 <option value="biologico">Biológico</option>
                 <option value="ergonomico">Ergonômico</option>
                 <option value="acidente">Acidente</option>
-            </select><br><br>
+            </select><br>
 
-            <label for="agente">Agente / Condição: </label><br>
-            <input type="text" id="agente" name="agente"><br><br>
+            <label for="agente">Agente / Condição: </label>
+            <input type="text" id="agente" name="agente"><br>
 
-            <label for="fonte">Fonte: </label><br>
-            <input type="text" id="fonte" name="fonte"><br><br>
+            <label for="fonte">Fonte: </label>
+            <input type="text" id="fonte" name="fonte"><br>
 
-            <label for="exposicao">Consequência da Exposição:</label><br>
-                <input type="text" id="exposicao" name="exposicao"><br><br>
+            <label for="exposicao">Consequência da Exposição:</label>
+                <input type="text" id="exposicao" name="exposicao"><br>
         </div>
             
         <div class="form__group"> 
@@ -50,7 +50,6 @@
                 <option value="3">Significativa</option>
                 <option value="4">Morte/Severa</option>
             </select><br>
-            <br><br>
 
             <label for="classificacao-probabilidade">Probabilidade:</label>
             <select id="classificacao-probabilidade" name="classificacao-probabilidade">
@@ -59,17 +58,16 @@
                 <option value="3">possível</option>
                 <option value="4">provável</option>
             </select><br>
-            <br><br>
         </div>
 
         <div class="form__group">
-            <h4>Medidas de Controle</h4><br>
-            <label for="medidascontrole"> Descrição das medidas administrativas, coletivas (EPC) ou individuais (EPI) a serem adotadas:</label><br><br>
+            <h3>Medidas de Controle</h3><br>
+            <label for="medidascontrole"> Descrição das medidas administrativas, coletivas (EPC) ou individuais (EPI) a serem adotadas:</label>
             <input type="text" id="medidascontrole" name="medidascontrole"><br>
         </div>
 
         <div class="form__group">
-            <br><h5>Classificação do Risco de Referência</h5><br>
+            <h3>Classificação do Risco de Referência</h3><br>
             <label for="classificacao-cosequencia-referencia">Consequência de Referência:</label>
              <select id="classificacao-cosequencia-referencia" name="classificacao-cosequencia-referencia">
                 <option value="1">Nenhuma/Leve</option>
@@ -83,16 +81,16 @@
                 <option value="2">remota</option>
                 <option value="3">possível</option>
                 <option value="4">provavel</option>
-            </select><br><br>
+            </select><br>
         </div>
 
         <div class="form__group">
-            <h6>Matriz de Avaliação</h6><br>
-            <label for="matriz">Tipo de Matriz de Avaliação de Execesso de Risco:</label><br><br>
+            <h3>Matriz de Avaliação</h3><br>
+            <label for="matriz">Tipo de Matriz de Avaliação de Execesso de Risco:</label>
             <select id="matriz" name="matriz">
                 <option value="individual">Exposição individual ou reduzido número de potenciais vítima</option>
                 <option value="varias">Exposição com lesão ou adoecimento de diversas vítimas simultaneamente</option>
-            </select><br><br><br>
+            </select><br>
         </div>
 
         <div class="form__group">

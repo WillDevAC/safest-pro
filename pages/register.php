@@ -15,7 +15,7 @@
         <div class="login__box">
             <img src="assets/logo.png" alt="Logo">
             <div class="login__description">
-                <h2>Registro de técnico</h2>
+                <h2>Registro do técnico</h2>
                 <span>
                     Preencha seus dados abaixo com atenção!
                 </span>

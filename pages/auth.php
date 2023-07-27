@@ -15,7 +15,7 @@
         <div class="login__box">
             <img src="assets/logo.png" alt="Logo">
             <div class="login__description">
-                <h2>Bem vindo, SafeST!</h2>
+                <h2>Bem vindo ao SafeST!</h2>
                 <span>
                     Faça login para continuar acessando
                     todos nossos serviços automatizados.

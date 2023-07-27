@@ -200,3 +200,7 @@
     color: gray;
     font-size: 1rem;
 }
+
+.modal{
+    width: 1000px !important;
+}
