@@ -1,4 +1,4 @@
-const URL_REQUEST = "http://localhost/safest-backend/?rota=";
+const URL_REQUEST = "http://localhost/safest/safest-backend/?rota=";
 
 const saveTokenWithAuthSuccess = async (token, name, id, email_user) => {
   let minutesExpiration = 30;

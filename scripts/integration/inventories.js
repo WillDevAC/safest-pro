@@ -1,10 +1,9 @@
 const situacoes = [];
 
-
 const listInventories = (id_tecnico, token) => {
   $.ajax({
     url:
-      "http://localhost/safest-backend/?rota=listInventory&token=" + token + "",
+      "http://localhost/safest/safest-backend/?rota=listInventory&token=" + token + "",
     type: "POST",
     data: {
       id: id_tecnico,
@@ -23,7 +22,7 @@ const listInventories = (id_tecnico, token) => {
             inventorie.nome +
             '</span></div><div class="inventarieDesc"><p>Data</p><span>' +
             inventorie.data +
-            '</span></div></div><div class="inventarieActions"><button>Ver detalhes</button><button>Emitir relatório</button><button>Excluir</button></div></div>'
+            '</span></div></div><div class="inventarieActions"><button>Ver detalhes</button><button class="btn_emitir_relatorio" name='+ inventorie.id +'>Emitir relatório</button><button>Excluir</button></div></div>'
         );
       });
     })
@@ -146,6 +145,8 @@ $("#btn-cadastrar-inventario-etapa4").click(function () {
   alert("Inventário cadastrado com sucesso!");
 });
 
+
+
 $("#btn-adicionar_situacao").click(function () {
   //adiciona novo perigo no objeto.
   insertSituation();
@@ -224,7 +225,7 @@ function limpar() {
 
 
 const fotos = [];
-const URL_REQUEST = "../../safest-backend/?rota=";
+const URL_REQUEST = "http://localhost/safest/safest-backend/?rota=";
 
 function previewFiles() {
   const preview = document.querySelector("#preview");
@@ -277,8 +278,6 @@ function ok() {
 
   const token = getCookieValue("@AuthToken");
   const idTecnico = getCookieValue("@UserID");
-
-  console.log(idTecnico);
 
   inventario.idTecnico = idTecnico;
 

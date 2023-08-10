@@ -30,3 +30,29 @@ $("#btn_add_inventory").click(function () {
       fadeDelay: 0.5,
   });
 });
+
+$("#inventoriesList").on('click','.btn_emitir_relatorio',function() {
+  alert($(this).attr("name"));
+  $.ajax({
+    url:
+      "http://localhost/safest/safest-backend/?rota=generateReport&token=" + getCookie("@AuthToken") + "",
+    type: "POST",
+    data: {
+      id: getCookie("@UserID"),
+      id_inventario: $(this).attr("name")
+    },
+    beforeSend: function () {
+      $.LoadingOverlay("show");
+    },
+  })
+    .done(function (response) {
+      $.LoadingOverlay("hide");
+      let report = JSON.parse(response);
+      localStorage.setItem('report', JSON.stringify(report));
+      window.location.href = "pages/report.php";
+      console.log(report);    
+    })
+    .fail(function (jqXHR, textStatus, error) {
+      console.log(error);
+    });
+});
