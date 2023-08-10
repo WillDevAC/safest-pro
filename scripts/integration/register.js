@@ -1,4 +1,4 @@
-const URL_REQUEST = "http://localhost/safest-backend/?rota=";
+const URL_REQUEST = "http://localhost/safest/safest-backend/?rota=";
 
 $("#cpf").mask("000.000.000-00");
 
