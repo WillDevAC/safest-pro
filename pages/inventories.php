@@ -25,9 +25,10 @@
                     <li class="active"><a href="./inventories"><i class="ph ph-cube"></i>Inventários</a></li>
                     <li><a href="#"><i class="ph ph-sign-out"></i></i>Logout</a></li>
                 </ul>
+                <p id="apoio">Apoio: </p>
                 <div class="poweredByCompany">
                     <div class="poweredByCompanyInfo">
-                        Apoio: <img src="assets/ifac.png" alt="Logo IFAC"> <img src="assets/ifmaker.jpg" alt="Logo IfMaker">
+                        <img src="assets/ifmaker.jpg" alt="Logo IfMaker"><img src="assets/ifac.png" alt="Logo IFAC"> 
                     </div>
                 </div>
             </aside>
@@ -51,6 +52,7 @@
         include "components/modals/add_inventorie/step1.php";
         include "components/modals/add_inventorie/step2.php";
         include "components/modals/add_inventorie/step3.php";
+        include "components/modals/add_inventorie/step4.php";
     ?>
 </body>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>

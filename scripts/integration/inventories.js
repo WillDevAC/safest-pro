@@ -41,6 +41,7 @@ jQuery(function ($) {
 $("#btn-cadastrar-inventario-etapa1").click(function () {
   /*let nome_inventario = $("#nome_inventario").val();
   let data_inventario = $("#data_inventario").val();*/
+  limpar();
 
   const nomeInve = $("#nome_inventario").val();
   const cidade = $("#cidade").val();
@@ -110,6 +111,34 @@ $("#btn-cadastrar-inventario-etapa2").click(function () {
 
 $("#btn-cadastrar-inventario-etapa3").click(function () {
   //pegar dados do modal.
+  insertSituation();
+
+  const inventario = JSON.parse(localStorage.getItem('inventario'));
+  inventario.situacoes = JSON.parse(localStorage.getItem('situacoes'));
+
+  localStorage.setItem('inventario', JSON.stringify(inventario));
+  localStorage.removeItem('situacoes');
+
+  //insertSituation();
+
+  //situacoes.push(situacao);
+
+  //localStorage.setItem('situacoes', JSON.stringify(situacoes));
+
+
+  $("#add_inventory_step3").modal("close");
+
+  //atualizar o objeto.
+
+  //sucesso.
+  $("#add_inventory_step4").modal({
+    fadeDuration: 1000,
+    fadeDelay: 0.5,
+  });
+});
+
+$("#btn-cadastrar-inventario-etapa4").click(function () {
+  //pegar dados do modal.
   //atualizar o objeto.
 
   //sucesso.
@@ -121,8 +150,18 @@ $("#btn-adicionar_situacao").click(function () {
   //adiciona novo perigo no objeto.
   insertSituation();
   limpar();
-  window.location.href = "#";
+  // window.location.href = "#";
   alert('adicionar perigo');
+  $("#add_inventory_step3").modal("close");
+  limpar();
+
+  //atualizar o objeto.
+
+  //sucesso.
+  $("#add_inventory_step2").modal({
+    fadeDuration: 1000,
+    fadeDelay: 0.5,
+  });
 });
 
 function insertSituation() {
@@ -269,6 +308,7 @@ function ok() {
   };
    
   insertInventory();
+  window.location.href = "inventories";
 
 }
 

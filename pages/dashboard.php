@@ -20,13 +20,15 @@
           <img src="assets/logo.png" alt="Logo" />
         </div>
         <ul class="aside__options">
-          <li class="active"><a href="./dashboard"><i class="ph ph-gauge"></i></i>Dashboard</a></li>
+          <li class="active"> <a href="./dashboard"><i class="ph ph-gauge"></i>Dashboard</a></li>
           <li><a href="./inventories"><i class="ph ph-cube"></i>Inventários</a></li>
-          <li><a href="#"><i class="ph ph-sign-out"></i></i>Logout</a></li>
+          <li><a href="#"><i class="ph ph-sign-out"></i>Logout</a></li>
         </ul>
+
+        <p id="apoio">Apoio: </p>
         <div class="poweredByCompany">
           <div class="poweredByCompanyInfo">
-            Apoio: <img src="assets/ifac.png" alt="Logo IFAC"> <img src="assets/ifmaker.jpg" alt="Logo IfMaker">
+            <img src="assets/ifmaker.jpg" alt="Logo IfMaker"> <img src="assets/ifac.png" alt="Logo IFAC">
           </div>
         </div>
       </aside>
